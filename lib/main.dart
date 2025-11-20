@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'screens/splash_screen.dart';
+import 'screens/login_screen.dart';
+import 'screens/home_redirect.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,20 +19,11 @@ class HW2App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const PlaceholderHome(),
-    );
-  }
-}
-
-class PlaceholderHome extends StatelessWidget {
-  const PlaceholderHome({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text("Homework 02 App Initialized"),
-      ),
+      routes: {
+        '/login': (context) => const LoginScreen(),
+        '/redirect': (context) => const HomeRedirect(),
+      },
+      home: const SplashScreen(),
     );
   }
 }
