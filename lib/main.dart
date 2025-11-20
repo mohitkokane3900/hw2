@@ -4,6 +4,7 @@ import 'firebase_options.dart';
 import 'screens/splash_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_redirect.dart';
+import 'screens/register_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,6 +23,7 @@ class HW2App extends StatelessWidget {
       routes: {
         '/login': (context) => const LoginScreen(),
         '/redirect': (context) => const HomeRedirect(),
+        '/register': (context) => const RegisterScreen(),
       },
       home: const SplashScreen(),
     );

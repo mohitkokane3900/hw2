@@ -7,7 +7,7 @@ class HomeRedirect extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("Home Redirect Placeholder"),
+        child: Text('Logged in. Message boards will go here.'),
       ),
     );
   }
